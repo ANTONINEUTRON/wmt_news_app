@@ -4,6 +4,7 @@ import 'package:wmt_news_app/features/articles/data/model/article_model.dart';
 import 'package:wmt_news_app/features/articles/view/bloc/article_bloc.dart';
 
 import '../bloc/article_event.dart';
+import '../widgets/big_post.dart';
 
 class ArticlesPage extends StatefulWidget {
   const ArticlesPage({Key? key}) : super(key: key);
@@ -33,7 +34,7 @@ class _ArticlesPageState extends State<ArticlesPage> {
               itemBuilder: (context, index){
                 return Column(
                   children: [
-                    Text(listOfArticles[index].title),
+                    BigPost(article: listOfArticles[index],),
                     Divider()
                   ],
                 );
