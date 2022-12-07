@@ -27,6 +27,7 @@ class NewsApiService{
 
     //loop through the list and convert the map to Article object
     for(Map<String, dynamic> articleItem in listOfArticles){
+      //Creates an article object
       var article = Article.fromJson(articleItem);
       listToBeReturned.add(article);
     }

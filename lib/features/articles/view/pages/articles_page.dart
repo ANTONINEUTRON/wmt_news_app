@@ -18,11 +18,14 @@ class _ArticlesPageState extends State<ArticlesPage> {
   @override
   void initState() {
     super.initState();
+
+    //Trigger the load event
     context.read<ArticleBloc>().add(LoadArticle());
   }
 
   @override
   Widget build(BuildContext context) {
+    //Subscribe to ArticleBloc
     var articleBloc = context.watch<ArticleBloc>();
     List<Article> listOfArticles = articleBloc.state.listOfArticles;
 
