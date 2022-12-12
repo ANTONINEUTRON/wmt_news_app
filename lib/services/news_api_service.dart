@@ -34,4 +34,6 @@ class NewsApiService{
 
     return listToBeReturned;
   }
+
+
 }
